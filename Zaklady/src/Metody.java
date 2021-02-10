@@ -69,6 +69,10 @@ public class Metody {
 		return vysledok;
 	}
 	
+	static double druhaMocnina(double zaklad) {
+		return zaklad * zaklad;
+	}
+	
 	static int[] vytvorPole(int pocetPrvkov, int defaultHodnota) {
 		int[] pole = new int[pocetPrvkov];
 		for(int i = 0; i < pole.length; i++) {
