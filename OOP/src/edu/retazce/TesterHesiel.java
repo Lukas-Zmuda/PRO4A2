@@ -22,8 +22,23 @@ public class TesterHesiel {
 	 * @return
 	 */
 	static boolean testHesla(String string) {
-		// TODO 
-		return false;
+		String specialCharacters=" !#$€%&'()*+,-./:;<=>?@[]^_`{|}~";
+		String numericCharacters="0123456789";
+		String characters[]=string.split("");
+		int numbers=0;
+		boolean special=false;
+		for (int i=0;i<characters.length;i++)
+		{
+			if (numericCharacters.contains(characters[i]))
+			{
+				numbers++;	
+			}
+			if (specialCharacters.contains(characters[i]))
+			{
+				special=true;
+		    }
+		}
+		return string.length() >= 10 && numbers>=2 && special==false;
 	}
 
 }
